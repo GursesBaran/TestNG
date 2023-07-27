@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="Test Groups Exclude">
+        <groups>
+            <run>
+                <exclude name="SmokeTest"></exclude>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="Day4.Groups"></class>
+        </classes>
+    </test>
+</suite>
