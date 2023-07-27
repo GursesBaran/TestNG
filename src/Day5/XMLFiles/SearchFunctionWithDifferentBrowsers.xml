@@ -1,14 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
+
+
+
+
     <test name="Search Function With Firefox">
 
         <parameter name="browser" value="firefox"></parameter>
         <parameter name="searchKeyword" value="mac"></parameter>
 
         <classes>
-            <class name="Day5.SearchFunctionTest"></class>
-
+            <class name="Day5.SearchFunctionWithDifferentBrowsers"></class>
         </classes>
     </test>
+
+
+
+
+
+
+
+    <test name="Search Function with Chrome">
+
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="searchKeyword" value="mac"></parameter>
+
+        <classes>
+            <class name="Day5.SearchFunctionWithDifferentBrowsers"></class>
+        </classes>
+    </test>
+
+
+
+
+
+
+
+
+
+
+    <test name="Search Function with Edge">
+
+        <parameter name="browser" value="edge"></parameter>
+        <parameter name="searchKeyword" value="mac"></parameter>
+
+        <classes>
+            <class name="Day5.SearchFunctionWithDifferentBrowsers"></class>
+        </classes>
+    </test>
+
+
+
 </suite>
