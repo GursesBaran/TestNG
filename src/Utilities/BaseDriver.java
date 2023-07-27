@@ -63,4 +63,17 @@ public class BaseDriver {
 
     }
 
+    public void login(String username, String pssword) {
+        driver.get("https://opencart.abstracta.us/index.php?route=account/login");
+
+        WebElement email = driver.findElement(By.id("input-email"));
+        email.sendKeys(username);
+
+        WebElement password = driver.findElement(By.id("input-password"));
+        password.sendKeys(pssword);
+
+        WebElement loginButton = driver.findElement(By.xpath("//input[@value='Login']"));
+        loginButton.click();
+
+    }
 }

@@ -10,8 +10,8 @@ import org.testng.annotations.Test;
 public class ContactUs extends BaseDriver {
 
     @Test
-    @Parameters("message")
-    void Test(String msg){
+    @Parameters({"message"})
+    void Test1(String msg) {
 
         login();
         WebElement contactus = driver.findElement(By.xpath("//ul[@class='list-unstyled']//a[contains(text(),'Contact Us')]"));
@@ -22,10 +22,20 @@ public class ContactUs extends BaseDriver {
         submit.click();
 
         Assert.assertTrue(driver.getCurrentUrl().contains("success"));
+    }
 
+    @Test
+    @Parameters({"message", "username", "password"})
+    void Test2(String msg, String username, String password) {
 
+        login(username,password);
+        WebElement contactus = driver.findElement(By.xpath("//ul[@class='list-unstyled']//a[contains(text(),'Contact Us')]"));
+        contactus.click();
+        WebElement message = driver.findElement(By.xpath("//textarea[@id='input-enquiry']"));
+        message.sendKeys(msg);
+        WebElement submit = driver.findElement(By.xpath("//input[@value='Submit']"));
+        submit.click();
 
-
-
+        Assert.assertTrue(driver.getCurrentUrl().contains("success"));
     }
 }

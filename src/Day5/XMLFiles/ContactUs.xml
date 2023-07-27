@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test name="Contact Us Test">
+    <test name="Contact Us Test1">
 
-        <parameter name="message" value="Batch 8 is coming"></parameter>
+        <parameter name="message" value="Batch 8 is coming to the market soooooo strong"></parameter>
+
         <classes>
-            <class name="Day5.ContactUs"></class>
+            <class name="Day5.ContactUs">
+                <methods>
+                    <exclude name="Test2"></exclude>
+                </methods>
+            </class>
         </classes>
     </test>
+
+    <test name="Contact Us Test 2">
+
+        <parameter name="message" value="Batch 8 is coming to the market soooooo strong"></parameter>
+        <parameter name="username" value="aliveliveli@gmail.com"></parameter>
+        <parameter name="password" value="Ali2023"></parameter>
+
+        <classes>
+            <class name="Day5.ContactUs">
+                <methods>
+                    <exclude name="Test1"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
 </suite>
