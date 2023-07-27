@@ -21,7 +21,7 @@ public class Exercise2 extends BaseDriver {
 
     @Test(groups = "SmokeTest")
     void validateMenu() {
-        //login();
+        login();
         WebDriver driver = new ChromeDriver();
         driver.get("https://opencart.abstracta.us/index.php?route=account/login");
 

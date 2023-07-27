@@ -17,7 +17,7 @@ public class BaseDriver {
 
     public static WebDriver driver;
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void createDriver() {
         closePreviousDrivers();
         Logger logger = Logger.getLogger("");
@@ -31,7 +31,7 @@ public class BaseDriver {
 
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void quitDriver() {
         try {
             Thread.sleep(3000);
@@ -53,10 +53,10 @@ public class BaseDriver {
         driver.get("https://opencart.abstracta.us/index.php?route=account/login");
 
         WebElement email = driver.findElement(By.id("input-email"));
-        email.sendKeys("testngusbatch@gmail.com");
+        email.sendKeys("aliveliveli@gmail.com");
 
         WebElement password = driver.findElement(By.id("input-password"));
-        password.sendKeys("usbatch1234");
+        password.sendKeys("Ali2023");
 
         WebElement loginButton = driver.findElement(By.xpath("//input[@value='Login']"));
         loginButton.click();
