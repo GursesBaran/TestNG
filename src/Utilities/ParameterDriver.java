@@ -35,12 +35,11 @@ public class ParameterDriver {
             driver.manage().timeouts().pageLoadTimeout(duration);
             driver.manage().timeouts().implicitlyWait(duration);
         }
-    @AfterClass(alwaysRun = true)
-    public void quitDriver(){
-        Tools.myWait(3);
-        driver.quit();
+    //@AfterClass(alwaysRun = true)
+    //public void quitDriver(){
+    //Tools.myWait(3);
+    //driver.quit();
 
-        }
     public void login() {
         driver.get("https://opencart.abstracta.us/index.php?route=account/login");
 

@@ -14,8 +14,8 @@ public class SearchFunctionWithDifferentBrowsers extends ParameterDriver {
     void searchFunctionTest(String searchKeyword) {
         login();
 
-        WebElement searchInput = driver.findElement(By.xpath("//input[@name='search']"));
-        searchInput.sendKeys(searchKeyword);
+        WebElement search = driver.findElement(By.xpath("//input[@name='search']"));
+        search.sendKeys(searchKeyword);
 
         WebElement searchButton = driver.findElement(By.xpath("//button[@class='btn btn-default btn-lg']"));
         searchButton.click();
