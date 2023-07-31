@@ -1,4 +1,5 @@
 package Utilities;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
+
 import java.io.IOException;
 import java.time.Duration;
 import java.util.logging.Level;
@@ -30,15 +32,15 @@ public class ParameterDriver {
         } else if (browserName.equalsIgnoreCase("edge")) {
             driver = new EdgeDriver();
         }
-            driver.manage().window().maximize();
-            Duration duration = Duration.ofSeconds(30);
-            driver.manage().timeouts().pageLoadTimeout(duration);
-            driver.manage().timeouts().implicitlyWait(duration);
-        }
-        //@AfterClass(alwaysRun = true)
-        //public void quitDriver(){
-        //Tools.myWait(3);
-        //driver.quit();
+        driver.manage().window().maximize();
+        Duration duration = Duration.ofSeconds(30);
+        driver.manage().timeouts().pageLoadTimeout(duration);
+        driver.manage().timeouts().implicitlyWait(duration);
+    }
+    //@AfterClass(alwaysRun = true)
+    //public void quitDriver(){
+    //Tools.myWait(3);
+    //driver.quit();
 
     public void login() {
         driver.get("https://opencart.abstracta.us/index.php?route=account/login");
@@ -53,6 +55,7 @@ public class ParameterDriver {
         loginButton.click();
 
     }
+
     public void login(String username, String pssword) {
         driver.get("https://opencart.abstracta.us/index.php?route=account/login");
 
@@ -66,6 +69,7 @@ public class ParameterDriver {
         loginButton.click();
 
     }
+
     public void closePreviousDrivers() {
         try {
             Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
