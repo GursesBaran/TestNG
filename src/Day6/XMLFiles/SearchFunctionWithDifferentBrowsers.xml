@@ -4,20 +4,19 @@
     <test name="Search Function with Firefox">
 
         <parameter name="browser" value="firefox"></parameter>
-        <parameter name="searchKeyword" value="mac"></parameter>
 
         <classes>
-            <class name="Day5.SearchFunctionWithDifferentBrowsers"></class>
+            <class name="Day6.SearchFunctionWithDataProviderParallelTest"></class>
         </classes>
     </test>
 
     <test name="Search Function with Chrome">
 
         <parameter name="browser" value="chrome"></parameter>
-        <parameter name="searchKeyword" value="mac"></parameter>
+
 
         <classes>
-            <class name="Day5.SearchFunctionWithDifferentBrowsers"></class>
+            <class name="Day6.SearchFunctionWithDataProviderParallelTest"></class>
         </classes>
     </test>
 </suite>
