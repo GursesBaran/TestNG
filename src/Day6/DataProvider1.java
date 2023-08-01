@@ -12,7 +12,7 @@ public class DataProvider1 extends BaseDriver {
     }
 
     @Test(dataProvider = "credentialsList")
-    void test2(String username, String password) {
+    void test2(String username,String password) {
         System.out.println("Test 2 is started");
         System.out.println("Test 2 is running for username = " + username + " and password = " + password);
         System.out.println("Test 2 is completed");
