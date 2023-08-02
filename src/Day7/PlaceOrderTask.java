@@ -7,13 +7,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 
 public class PlaceOrderTask extends BaseDriver {
 
-    @Test
+    @Test(dataProvider = "keywordGenerator")
     public void Test() {
 
         login();
@@ -50,6 +51,16 @@ public class PlaceOrderTask extends BaseDriver {
         WebElement successMessage = driver.findElement(By.xpath("(//div[@id='content']//p)[1]"));
         System.out.println("success message = " + successMessage.getText());
 
+        Assert.assertTrue(successMessage.getText().contains("successfully processed"));
+
     }
+
+    @DataProvider(name = "keywordGenerator")
+    public Object[][] searchKeyword() {
+
+        Object[][] keyword = {{"ipod"}};
+        return keyword;
+    }
+
 
 }

@@ -3,9 +3,9 @@
 <suite name="All Test Suite">
     <test name="PlaceOrderTask">
         <classes>
-            <class name="Day7.PlaceOrderTask">
+            <class name="Day7.PlaceOrderTestWithPOM">
                 <methods>
-                    <include name="Test"/>
+                    <include name="placeOrderTest"/>
                 </methods>
             </class>
         </classes>

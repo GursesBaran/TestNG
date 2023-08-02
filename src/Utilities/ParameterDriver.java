@@ -16,7 +16,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ParameterDriver {
-    public WebDriver driver;
+    public static WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
     @Parameters("browser")

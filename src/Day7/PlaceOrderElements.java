@@ -46,5 +46,8 @@ public class PlaceOrderElements {
     @FindBy(xpath = "//input[@id='button-confirm']")
     public WebElement confirmorder;
 
+    @FindBy(xpath = "(//div[@id='content']//p)[1]")
+    public WebElement successmessage;
+
 
 }
