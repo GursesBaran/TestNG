@@ -2,10 +2,21 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test name="WishList">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="searchKeyword" value="ipod"></parameter>
+
         <classes>
             <class name="Day7.WishListTest"></class>
-            <parameter name="browser" value="chrome"></parameter>
-            <parameter name="searchKeyword" value="samsung"></parameter>
+        </classes>
+    </test>
+
+    <test name="Wish List Test with Firefix">
+
+        <parameter name="browser" value="firefox"></parameter>
+        <parameter name="searchKeyword" value="ipod"></parameter>
+
+        <classes>
+            <class name="Day7.WishListTest"></class>
         </classes>
     </test>
 </suite>

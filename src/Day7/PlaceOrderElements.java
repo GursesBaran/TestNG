@@ -1,13 +1,14 @@
 package Day7;
 
 import Utilities.BaseDriver;
+import Utilities.ParameterDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class PlaceOrderElements {
     public PlaceOrderElements() {
-        PageFactory.initElements(BaseDriver.driver, this);
+        PageFactory.initElements(ParameterDriver.driver, this);
     }
 
     @FindBy(xpath = "//input[@placeholder='Search']")

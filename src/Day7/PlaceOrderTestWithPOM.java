@@ -1,6 +1,7 @@
 package Day7;
 
 import Utilities.BaseDriver;
+import Utilities.ParameterDriver;
 import Utilities.Tools;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -11,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class PlaceOrderTestWithPOM extends BaseDriver{
+public class PlaceOrderTestWithPOM extends ParameterDriver {
 
     @Test
     void placeOrderTest(){
