@@ -10,7 +10,7 @@
         </classes>
     </test>
 
-    <test name="Wish List Test with Firefix">
+    <test name="Wish List Test with Firefox">
 
         <parameter name="browser" value="firefox"></parameter>
         <parameter name="searchKeyword" value="ipod"></parameter>
