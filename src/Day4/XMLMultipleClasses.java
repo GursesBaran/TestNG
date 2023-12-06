@@ -7,7 +7,7 @@ public class XMLMultipleClasses {
 
     @Test
     void test1(){
-        System.out.println("XMLMultipleClasses test1");
+        System.out.println("XMLMultipleClasses Test 1");
     }
 
     @Test

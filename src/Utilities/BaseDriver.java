@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -22,7 +23,7 @@ public class BaseDriver {
         closePreviousDrivers();
         Logger logger = Logger.getLogger("");
         logger.setLevel(Level.SEVERE);
-        driver = new ChromeDriver();
+        driver = new EdgeDriver();
         driver.manage().window().maximize();
 
         Duration duration = Duration.ofSeconds(30);
