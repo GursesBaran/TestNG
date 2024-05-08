@@ -18,7 +18,7 @@ public class Dependency {
 
     @Test(dependsOnMethods = {"driveCar","startEngine"}) // This test depends on both startEngine and driveCar tests
     void parkCar(){
-        System.out.println("Car cis parked");
+        System.out.println("Car is parked");
     }
 
     @Test(dependsOnMethods = {"driveCar","startEngine","parkCar"})

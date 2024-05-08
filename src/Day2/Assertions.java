@@ -10,7 +10,7 @@ public class Assertions {
         String str1 = "John";
         String str2 = "John";
 
-        Assert.assertEquals(str1,str2,"They are not equal"); // Checks if two values are the same
+        Assert.assertEquals(str1, str2,"They are not equal"); // Checks if two values are the same
     }
 
     @Test
